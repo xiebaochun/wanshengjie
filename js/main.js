@@ -47,6 +47,7 @@ $("#bottom_img").swipe({
           //     isStart=true;
           //     timeCallBack=setInterval(playGame,2000);
           //   }
+           $("#bottom_img").css({"z-index":"1"});
           if(direction=="left"){
             $("#next_img").css({"left":device_width+"px","z-index":"2"});
           }else{
@@ -94,6 +95,7 @@ $("#bottom_img").swipe({
           //     isStart=true;
           //     timeCallBack=setInterval(playGame,2000);
           //   }
+           $("#bottom_img").css({"z-index":"1"});
           $("#next_img").attr("src","images/"+index+".jpg");
           if(direction=="right"){
             $("#next_img").css({"left":-device_width+"px","z-index":"2"});
@@ -137,6 +139,7 @@ $("#next_img").swipe({
           //     isStart=true;
           //     timeCallBack=setInterval(playGame,2000);
           //   }
+          $("#next_img").css({"z-index":"1"});
           if(direction=="left"){
             $("#bottom_img").css({"left":device_width+"px","z-index":"2"});
           }else{
@@ -183,6 +186,7 @@ $("#next_img").swipe({
           //     isStart=true;
           //     timeCallBack=setInterval(playGame,2000);
           //   }
+          $("#next_img").css({"z-index":"1"});
           $("#bottom_img").attr("src","images/"+index+".jpg");
           if(direction=="right"){
             $("#bottom_img").css({"left":-device_width+"px","z-index":"2"});
