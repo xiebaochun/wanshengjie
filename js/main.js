@@ -138,9 +138,9 @@ $("#next_img").swipe({
           //     timeCallBack=setInterval(playGame,2000);
           //   }
           if(direction=="left"){
-            $("#bottom_img").css({"left":-device_width+"px","z-index":"2"});
+            $("#bottom_img").css({"left":device_width+"px","z-index":"2"});
           }else{
-             $("#bottom_img").css({"top":-device_height+"px","z-index":"2"});
+             $("#bottom_img").css({"top":device_height+"px","z-index":"2"});
           }
             $("#bottom_img").attr("src","images/"+index+".jpg");
             $("#bottom_img").show();
