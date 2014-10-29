@@ -9,7 +9,7 @@ body,html{
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 2;
+	z-index: 3;
 	
 }
 
@@ -17,12 +17,169 @@ body,html{
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 1;
+	z-index: 2;
 }
-#next_img{
-	display: none;
+.tips{
+	/*display: none;*/
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 1;
+	z-index: 0;
+}
+.tips img{
+	position: absolute;
+}
+
+#tip1_01{
+	width: 100%;
+	bottom: 0px;
+}
+/*小妹妹*/
+#tip1_02{
+	display: none;
+	/*width: 50%;
+	top:50%;*/
+	bottom: 20px;
+}
+/*文字*/
+#tip1_03{
+	display: none;
+	/*width: 200px;*/
+	top:13%;
+}
+#tip1_04{
+	width: 100%;
+}
+/*底部*/
+#tip1_05{
+	display: none;
+	width: 100%;
+	bottom: 0px;
+}
+
+
+
+
+#tip2_01{
+	width: 100%;
+	bottom: 0px;
+}
+/*小妹妹*/
+#tip2_02{
+	display: none;
+	/*width: 50%;
+	top:50%;*/
+	right: 0px;
+	bottom: 20px;
+}
+/*文字*/
+#tip2_03{
+	display: none;
+	/*width: 200px;*/
+	top:13%;
+}
+#tip2_04{
+	width: 100%;
+}
+/*底部*/
+#tip2_05{
+	display: none;
+	width: 100%;
+	bottom: 0px;
+}
+
+
+
+
+#tip3_01{
+	width: 100%;
+	bottom: 0px;
+}
+/*小妹妹*/
+#tip3_02{
+	display: none;
+	/*width: 50%;
+	top:50%;*/
+	right: 0px;
+	bottom: 20px;
+}
+/*文字*/
+#tip3_03{
+	display: none;
+	/*width: 200px;*/
+	top:13%;
+}
+#tip3_04{
+	width: 100%;
+}
+/*底部*/
+#tip3_05{
+	display: none;
+	width: 100%;
+	bottom: 0px;
+}
+
+
+
+
+
+#tip4_01{
+	width: 100%;
+	bottom: 0px;
+}
+/*小妹妹*/
+#tip4_02{
+	display: none;
+	/*width: 50%;
+	top:50%;*/
+	right: 0px;
+	bottom: 20px;
+}
+/*文字*/
+#tip4_03{
+	display: none;
+	/*width: 200px;*/
+	top:13%;
+}
+#tip4_04{
+	width: 100%;
+}
+/*底部*/
+#tip4_05{
+	display: none;
+	width: 100%;
+	bottom: 0px;
+}
+
+
+
+
+
+#tip5_01{
+	width: 100%;
+	bottom: 0px;
+}
+/*小妹妹*/
+#tip5_02{
+	display: none;
+	/*width: 50%;
+	top:50%;*/
+	
+	bottom: 20px;
+}
+/*文字*/
+#tip5_03{
+	display: none;
+	/*width: 200px;*/
+	top:13%;
+}
+#tip5_04{
+	display: none;
+	/*width: 100%;*/
+}
+/*底部*/
+#tip5_05{
+	display: none;
+	/*width: 50%;*/
+	bottom: 0px;
 }
