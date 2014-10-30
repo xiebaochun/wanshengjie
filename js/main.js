@@ -27,6 +27,7 @@ $(function () {
   var device_height=jQuery(window).height();
   var device_width=jQuery(window).width();
   console.log(device_height);
+  $("#index_img").load(function(){$("#loader").hide();});
   $("#index_img").css({"height":device_height+"px","width":device_width+"px"});
   $("#bottom_img").css({"height":device_height+"px","width":device_width+"px"});
 
