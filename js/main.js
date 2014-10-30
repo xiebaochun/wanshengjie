@@ -69,7 +69,7 @@ $(function () {
     if(direction=="left"||direction=="up"){
 
       if(isSwiping)return;
-      isSwiping=false;
+      isSwiping=true;
 
       console.log("You swiped " + direction );
       index+=1;
@@ -128,7 +128,7 @@ $(function () {
       if((direction=="left"||direction=="up")&&index<=6){
 
         if(isSwiping)return;
-        isSwiping=false;
+        isSwiping=true;
 
         console.log("You swiped " + direction );
         index+=1;
@@ -169,7 +169,7 @@ $(function () {
      }
      if((direction=="right"||direction=="down")&&index>=3){
       if(isSwiping)return;
-      isSwiping=false;
+      isSwiping=true;
 
       console.log("You swiped " + direction );
       index-=1;
@@ -206,7 +206,7 @@ $("#tip_02").swipe({
     if((direction=="left"||direction=="up")&&index<=6){
 
       if(isSwiping)return;
-      isSwiping=false;
+      isSwiping=true;
 
       console.log("You swiped " + direction );
       index+=1;
@@ -242,7 +242,7 @@ $("#tip_02").swipe({
    }
    if((direction=="right"||direction=="down")&&index>=3){
     if(isSwiping)return;
-    isSwiping=false;
+    isSwiping=true;
 
     console.log("You swiped " + direction );
     index-=1;
@@ -278,7 +278,7 @@ $("#tip_03").swipe({
     if((direction=="left"||direction=="up")&&index<=6){
 
       if(isSwiping)return;
-      isSwiping=false;
+      isSwiping=true;
 
       console.log("You swiped " + direction );
       index+=1;
@@ -315,7 +315,7 @@ $("#tip_03").swipe({
    }
    if((direction=="right"||direction=="down")&&index>=3){
     if(isSwiping)return;
-    isSwiping=false;
+    isSwiping=true;
 
     console.log("You swiped " + direction );
     index-=1;
@@ -351,7 +351,7 @@ $("#tip_04").swipe({
     if((direction=="left"||direction=="up")&&index<=6){
 
       if(isSwiping)return;
-      isSwiping=false;
+      isSwiping=true;
 
       console.log("You swiped " + direction );
       index+=1;
@@ -390,7 +390,7 @@ $("#tip_04").swipe({
    }
    if((direction=="right"||direction=="down")&&index>=3){
     if(isSwiping)return;
-    isSwiping=false;
+    isSwiping=true;
 
     console.log("You swiped " + direction );
     index-=1;
@@ -426,7 +426,7 @@ $("#tip_05").swipe({
 
     if((direction=="right"||direction=="down")&&index>=3){
       if(isSwiping)return;
-      isSwiping=false;
+      isSwiping=true;
 
       console.log("You swiped " + direction );
       index-=1;
