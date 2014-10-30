@@ -58,7 +58,7 @@ $(function () {
 });
 
  $("#tip5_04").css({"max-width":"271px","width":"50%"});
- $("#tip5_04").css({"left":"70%","top":"15%"});
+ $("#tip5_04").css({"left":"45%","top":"15%"});
  $("#tip5_05").css({"max-width":"372px","width":"50%"});
  $("#tip5_05").css({"left":(device_width-$("#tip5_05").width())/2+"px","bottom":"5%"});
 
