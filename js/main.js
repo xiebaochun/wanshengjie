@@ -17,7 +17,7 @@ $(function () {
     );
   $('#index_img').eraser({
     progressFunction: function(p) {
-      if(p>=0.1){
+      if(p>=0.5){
         $('#index_img').eraser('clear');
         $('#index_img').hide();
       }
