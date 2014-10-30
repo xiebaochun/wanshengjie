@@ -1,20 +1,7 @@
 $(function () {
   var index=2;
-  var isStart=false;
-  var time=0;
-  var count=0;
   var isSwiping=false;
-  var timeCallBack;
-  var images=[];
-  preload(
-    "images/1.jpg",
-    "images/2.jpg",
-    "images/3.jpg",
-    "images/4.jpg",
-    "images/5.jpg",
-    "images/6.jpg",
-    "images/7.jpg"
-    );
+
   $('#index_img').eraser({
     progressFunction: function(p) {
       if(p>=0.5){
@@ -33,11 +20,8 @@ $(function () {
 
   $("#tip_01").css({"height":device_height+"px","width":device_width+"px"});
 
- // $("#tip_01").css({"left":device_width+"px","z-index":"1"});
  $("#tip1_01").css({"height":"100%","width":"100%"});
- //$("#tip1_03").css({"max-width":"640px","width":"100%"});
  $("#tip1_02").css({"max-width":"800px","width":"80%"});
-
  $(".tips").css({"height":device_height+"px","width":device_width+"px"});
 
  $(".bg").css({"height":"100%","width":"100%"});
@@ -72,14 +56,8 @@ $(function () {
       isSwiping=true;
 
       console.log("You swiped " + direction );
-      index+=1;
+      
 
-          //       count++;
-          //       $("#count_number").html(count);
-          //   if(!isStart){
-          //     isStart=true;
-          //     timeCallBack=setInterval(playGame,2000);
-          //   }
           $("#bottom_img").css({"z-index":"1"});
 
           $("#tip_01").css({"z-index":"2"});
@@ -111,16 +89,11 @@ $(function () {
              $("#bottom_img").removeClass("animated fadeOutLeft");
 
              $("#bottom_img").css({"z-index":"0"});
-
-
-             // $("#bottom_img").removeClass("animated bounceOutLeft");
-             // $("#bottom_img").removeClass("animated bounceOutRight");
              
            });
          }
        }
      });
-// function addEventTip_01(){
 
   $("#tip_01").swipe({
     swipe:function(event, direction, distance, duration, fingerCount) {
@@ -371,7 +344,7 @@ $("#tip_04").swipe({
        $("#tip5_03").show();
        $("#tip5_03").addClass("animated fadeInDown");
        $("#tip5_02").show();
-       $("#tip5_02").addClass("animated fadeInRight");
+       $("#tip5_02").addClass("animated fadeIn");
 
        $("#tip5_04").show();
        $("#tip5_04").addClass("animated fadeInRight");
@@ -455,11 +428,5 @@ $("#tip_05").swipe({
    }
  }
 });
-// }
-function preload() {
-  for (i = 0; i < preload.arguments.length; i++) {
-    images[i] = new Image()
-    images[i].src = preload.arguments[i]
-  }
-}
+
 });
