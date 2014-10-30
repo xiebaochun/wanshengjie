@@ -84,10 +84,11 @@ $("#bottom_img").swipe({
 
            if(direction=="left"){
             $("#tip_01").addClass("animated fadeInRight");
+            $("#bottom_img").addClass("animated fadeOutLeft");
             // $("#bottom_img").addClass("animated bounceOutLeft");
           }else{
              $("#tip_01").addClass("animated fadeInUp");
-             
+             $("#bottom_img").addClass("animated fadeOutDown");
              // $("#bottom_img").addClass("animated bounceOutRight");
           }
           $('#tip_01').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -101,6 +102,9 @@ $("#bottom_img").swipe({
 
              $("#tip_01").removeClass("animated fadeInUp");
              $("#tip_01").removeClass("animated fadeInRight");
+
+             $("#bottom_img").removeClass("animated fadeOutDown");
+             $("#bottom_img").removeClass("animated fadeOutLeft");
 
             $("#bottom_img").css({"z-index":"0"});
            
@@ -130,8 +134,10 @@ $("#bottom_img").swipe({
             $("#tip_02").css({"z-index":"2"});
              if(direction=="left"){
               $("#tip_02").addClass("animated fadeInRight");
+              $("#tip_01").addClass("animated fadeOutLeft");
             }else{
                $("#tip_02").addClass("animated fadeInUp");
+               $("#tip_01").addClass("animated fadeOutUp");
             }
 
              $('#tip_02').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -145,6 +151,9 @@ $("#bottom_img").swipe({
                 2
                $("#tip_02").removeClass("animated fadeInRight");
                $("#tip_02").removeClass("animated fadeInRight");
+
+               $("#tip_01").removeClass("animated fadeOutLeft");
+               $("#tip_01").removeClass("animated fadeOutUp");
                 
                $("#tip_01").css({"z-index":"0"});
                
@@ -164,8 +173,10 @@ $("#bottom_img").swipe({
             $("#bottom_img").css({"z-index":"2"});
              if(direction=="right"){
               $("#bottom_img").addClass("animated fadeInLeft");
+              $("#tip_01").addClass("animated fadeOutRight");
             }else{
                $("#bottom_img").addClass("animated fadeInDown");
+               $("#tip_01").addClass("animated fadeOutDown");
             }
             $('#bottom_img').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
@@ -173,6 +184,9 @@ $("#bottom_img").swipe({
 
              $("#bottom_img").removeClass("animated fadeInDown");
              $("#bottom_img").removeClass("animated fadeInLeft");
+
+             $("#tip_01").removeClass("animated fadeOutRight");
+             $("#tip_01").removeClass("animated fadeOutDown");
             $("#tip_01").css({"z-index":"0"});
           });
            
@@ -196,8 +210,10 @@ $("#bottom_img").swipe({
             $("#tip_03").css({"z-index":"2"});
              if(direction=="left"){
               $("#tip_03").addClass("animated fadeInRight");
+              $("#tip_02").addClass("animated fadeOutLeft");
             }else{
                $("#tip_03").addClass("animated fadeInUp");
+               $("#tip_02").addClass("animated fadeOutUp");
             }
              $('#tip_03').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
@@ -209,6 +225,9 @@ $("#bottom_img").swipe({
                  $("#tip3_05").addClass("animated fadeInUp");
              $("#tip_03").removeClass("animated fadeInRight");
              $("#tip_03").removeClass("animated fadeInUp");
+
+             $("#tip_02").removeClass("animated fadeOutLeft");
+             $("#tip_02").removeClass("animated fadeOutUp");
              $("#tip_02").css({"z-index":"0"});
             
           });
@@ -225,13 +244,18 @@ $("#bottom_img").swipe({
             $("#tip_01").css({"z-index":"2"});
              if(direction=="right"){
               $("#tip_01").addClass("animated fadeInLeft");
+              $("#tip_02").addClass("animated fadeOutRight");
             }else{
                $("#tip_01").addClass("animated fadeInDown");
+               $("#tip_02").addClass("animated fadeOutDown");
             }
             $('#tip_01').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
              $("#tip_01").removeClass("animated fadeInDown");
              $("#tip_01").removeClass("animated fadeInLeft");
+
+             $("#tip_02").removeClass("animated fadeOutRight");
+             $("#tip_02").removeClass("animated fadeOutDown");
              $("#tip_02").css({"z-index":"0"});
             
           });
@@ -256,8 +280,10 @@ $("#bottom_img").swipe({
             $("#tip_04").css({"z-index":"2"});
              if(direction=="left"){
               $("#tip_04").addClass("animated fadeInRight");
+              $("#tip_03").addClass("animated fadeOutLeft");
             }else{
                $("#tip_04").addClass("animated fadeInUp");
+               $("#tip_03").addClass("animated fadeOutUp");
             }
              $('#tip_04').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
@@ -269,6 +295,9 @@ $("#bottom_img").swipe({
                  $("#tip4_05").addClass("animated fadeInUp");
              $("#tip_04").removeClass("animated fadeInRight");
              $("#tip_04").removeClass("animated fadeInUp");
+
+             $("#tip_03").removeClass("animated fadeOutLeft");
+             $("#tip_03").removeClass("animated fadeOutUp");
              $("#tip_03").css({"z-index":"0"});
             
           });
@@ -285,13 +314,18 @@ $("#bottom_img").swipe({
             $("#tip_02").css({"z-index":"2"});
              if(direction=="right"){
               $("#tip_02").addClass("animated fadeInLeft");
+              $("#tip_03").addClass("animated fadeOutRight");
             }else{
                $("#tip_02").addClass("animated fadeInDown");
+               $("#tip_03").addClass("animated fadeOutDown");
             }
             $('#tip_02').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
              $("#tip_02").removeClass("animated fadeInDown");
              $("#tip_02").removeClass("animated fadeInLeft");
+
+             $("#tip_03").removeClass("animated fadeOutDown");
+             $("#tip_03").removeClass("animated fadeOutRight");
              $("#tip_03").css({"z-index":"0"});
             
           });
@@ -316,8 +350,10 @@ $("#bottom_img").swipe({
               $("#tip_05").css({"z-index":"2"});
               if(direction=="left"){
                 $("#tip_05").addClass("animated fadeInRight");
+                $("#tip_04").addClass("animated fadeOutLeft");
               }else{
                  $("#tip_05").addClass("animated fadeInUp");
+                 $("#tip_04").addClass("animated fadeOutUp");
               }
                $('#tip_05').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                    isSwiping=false;
@@ -334,6 +370,9 @@ $("#bottom_img").swipe({
 
                  $("#tip_05").removeClass("animated fadeInRight");
                  $("#tip_05").removeClass("animated fadeInUp");
+
+                 $("#tip_04").removeClass("animated fadeOutUp");
+                 $("#tip_04").removeClass("animated fadeOutLeft");
                  $("#tip_04").css({"z-index":"0"});
             
               });
@@ -350,13 +389,18 @@ $("#bottom_img").swipe({
             $("#tip_03").css({"z-index":"2"});
              if(direction=="right"){
               $("#tip_03").addClass("animated fadeInLeft");
+              $("#tip_04").addClass("animated fadeOutRight");
             }else{
                $("#tip_03").addClass("animated fadeInDown");
+               $("#tip_04").addClass("animated fadeOutDown");
             }
             $('#tip_03').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
              $("#tip_03").removeClass("animated fadeInDown");
              $("#tip_03").removeClass("animated fadeInLeft");
+
+             $("#tip_04").removeClass("animated fadeOutDown");
+             $("#tip_04").removeClass("animated fadeOutRight");
              $("#tip_04").css({"z-index":"0"});
             
           });
@@ -381,13 +425,18 @@ $("#tip_05").swipe({
             $("#tip_04").css({"z-index":"2"});
              if(direction=="right"){
               $("#tip_04").addClass("animated fadeInLeft");
+              $("#tip_05").addClass("animated fadeOutRight");
             }else{
                $("#tip_04").addClass("animated fadeInDown");
+               $("#tip_05").addClass("animated fadeOutDown");
             }
             $('#tip_04').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
              $("#tip_04").removeClass("animated fadeInDown");
              $("#tip_04").removeClass("animated fadeInLeft");
+
+             $("#tip_05").removeClass("animated fadeOutDown");
+             $("#tip_05").removeClass("animated fadeOutRight");
              $("#tip_05").css({"z-index":"0"});
             
           });
