@@ -52,7 +52,9 @@ $(function () {
 
     if(direction=="left"||direction=="up"){
 
-      if(isSwiping)return;
+      if(isSwiping){
+        return false;
+      }
       isSwiping=true;
       index+=1;
       console.log("You swiped " + direction );
@@ -100,7 +102,9 @@ $(function () {
 
       if((direction=="left"||direction=="up")&&index<=6){
 
-        if(isSwiping)return;
+      if(isSwiping){
+        return false;
+      }
         isSwiping=true;
 
         console.log("You swiped " + direction );
@@ -128,7 +132,7 @@ $(function () {
          $("#tip2_06").show();
          $("#tip2_06").addClass("animated fadeIn");
 
-         $("#tip_02").removeClass("animated fadeInRight");
+         $("#tip_02").removeClass("animated fadeInUp");
          $("#tip_02").removeClass("animated fadeInRight");
 
          $("#tip_01").removeClass("animated fadeOutLeft");
@@ -141,7 +145,9 @@ $(function () {
 
      }
      if((direction=="right"||direction=="down")&&index>=3){
-      if(isSwiping)return;
+      if(isSwiping){
+       return false;
+      }
       isSwiping=true;
 
       console.log("You swiped " + direction );
@@ -178,7 +184,9 @@ $("#tip_02").swipe({
 
     if((direction=="left"||direction=="up")&&index<=6){
 
-      if(isSwiping)return;
+      if(isSwiping){
+      return false;
+      }
       isSwiping=true;
 
       console.log("You swiped " + direction );
@@ -214,7 +222,9 @@ $("#tip_02").swipe({
      });
    }
    if((direction=="right"||direction=="down")&&index>=3){
-    if(isSwiping)return;
+   if(isSwiping){
+      return false;
+    }
     isSwiping=true;
 
     console.log("You swiped " + direction );
@@ -250,7 +260,9 @@ $("#tip_03").swipe({
 
     if((direction=="left"||direction=="up")&&index<=6){
 
-      if(isSwiping)return;
+      if(isSwiping){
+       return false;
+      }
       isSwiping=true;
 
       console.log("You swiped " + direction );
@@ -287,7 +299,9 @@ $("#tip_03").swipe({
      });
    }
    if((direction=="right"||direction=="down")&&index>=3){
-    if(isSwiping)return;
+   if(isSwiping){
+      return false;
+   }
     isSwiping=true;
 
     console.log("You swiped " + direction );
@@ -323,7 +337,9 @@ $("#tip_04").swipe({
 
     if((direction=="left"||direction=="up")&&index<=6){
 
-      if(isSwiping)return;
+      if(isSwiping){
+        return false;
+      }
       isSwiping=true;
 
       console.log("You swiped " + direction );
@@ -362,7 +378,11 @@ $("#tip_04").swipe({
      });
    }
    if((direction=="right"||direction=="down")&&index>=3){
-    if(isSwiping)return;
+    
+    if(isSwiping){
+      return false;
+    }
+
     isSwiping=true;
 
     console.log("You swiped " + direction );
@@ -398,7 +418,9 @@ $("#tip_05").swipe({
 
 
     if((direction=="right"||direction=="down")&&index>=3){
-      if(isSwiping)return;
+      if(isSwiping){
+      return false;
+      }
       isSwiping=true;
 
       console.log("You swiped " + direction );
