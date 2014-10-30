@@ -54,7 +54,7 @@ $(function () {
 
       if(isSwiping)return;
       isSwiping=true;
-
+      index+=1;
       console.log("You swiped " + direction );
       
 
