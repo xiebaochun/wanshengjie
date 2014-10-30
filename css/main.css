@@ -30,6 +30,10 @@ body,html{
 	position: absolute;
 }
 
+.text{
+	width: 100%;
+}
+
 #tip1_01{
 	width: 100%;
 	bottom: 0px;

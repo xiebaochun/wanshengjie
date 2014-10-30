@@ -33,20 +33,28 @@ var timeCallBack;
  
  // $("#tip_01").css({"left":device_width+"px","z-index":"1"});
  $("#tip1_01").css({"height":"100%","width":"100%"});
- $("#tip1_03").css({"max-width":"640px","width":"100%"});
+ //$("#tip1_03").css({"max-width":"640px","width":"100%"});
  $("#tip1_02").css({"max-width":"480px","width":"60%"});
 
  $(".tips").css({"height":device_height+"px","width":device_width+"px"});
 
   $(".bg").css({"height":"100%","width":"100%"});
- $("#tip2_03").css({"max-width":"640px","width":"100%"});
+ //$("#tip2_03").css({"max-width":"640px","width":"100%"});
  $("#tip2_02").css({"max-width":"480px","width":"60%"});
 
 
-  $("#tip5_02").css({"max-width":"640px","width":"100%"});
-  $("#tip5_02").css({"left":(device_width-$("#tip5_02").width())/2+"px","top":"16%"});
+  $("#tip5_02").css({"max-width":"1200px","width":"100%"});
+  $("#tip5_02").load(function(){
+    
+    $("#tip5_02").css({"left":(device_width-$("#tip5_02").width())/2+"px","top":(device_height-$("#tip5_02").height())/2+"px"});
+  });
+  
+  $("#tip5_02").css({"left":(device_width-$("#tip5_02").width())/2+"px","top":(device_height-$("#tip5_02").height())/2+"px"});
   $("#tip5_03").css({"max-width":"640px","width":"100%"});
-  $("#tip5_03").css({"left":(device_width-$("#tip5_03").width())/2+"px","top":"35%"});
+  $("#tip5_03").load(function(){
+    $("#tip5_03").css({"left":(device_width-$("#tip5_03").width())/2+"px","top":(device_height-$("#tip5_03").height())/2+"px"});
+  });
+  
   $("#tip5_04").css({"max-width":"271px","width":"50%"});
   $("#tip5_04").css({"left":"70%","top":"15%"});
   $("#tip5_05").css({"max-width":"372px","width":"50%"});
@@ -75,10 +83,10 @@ $("#bottom_img").swipe({
            $("#tip_01").css({"z-index":"2"});
 
            if(direction=="left"){
-            $("#tip_01").addClass("animated bounceInRight");
+            $("#tip_01").addClass("animated fadeInRight");
             // $("#bottom_img").addClass("animated bounceOutLeft");
           }else{
-             $("#tip_01").addClass("animated bounceInUp");
+             $("#tip_01").addClass("animated fadeInUp");
              
              // $("#bottom_img").addClass("animated bounceOutRight");
           }
@@ -87,12 +95,12 @@ $("#bottom_img").swipe({
              $("#tip1_03").show();
              $("#tip1_03").addClass("animated fadeInDown");
              $("#tip1_02").show();
-             $("#tip1_02").addClass("animated bounceInLeft");
+             $("#tip1_02").addClass("animated fadeInLeft");
              $("#tip1_05").show();
              $("#tip1_05").addClass("animated fadeInUp");
 
-             $("#tip_01").removeClass("animated bounceInUp");
-             $("#tip_01").removeClass("animated bounceInRight");
+             $("#tip_01").removeClass("animated fadeInUp");
+             $("#tip_01").removeClass("animated fadeInRight");
 
             $("#bottom_img").css({"z-index":"0"});
            
@@ -121,9 +129,9 @@ $("#bottom_img").swipe({
             $("#tip_01").css({"z-index":"1"});
             $("#tip_02").css({"z-index":"2"});
              if(direction=="left"){
-              $("#tip_02").addClass("animated bounceInRight");
+              $("#tip_02").addClass("animated fadeInRight");
             }else{
-               $("#tip_02").addClass("animated bounceInUp");
+               $("#tip_02").addClass("animated fadeInUp");
             }
 
              $('#tip_02').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -131,12 +139,12 @@ $("#bottom_img").swipe({
                  $("#tip2_03").show();
                  $("#tip2_03").addClass("animated fadeInDown");
                  $("#tip2_02").show();
-                 $("#tip2_02").addClass("animated bounceInRight");
+                 $("#tip2_02").addClass("animated fadeInRight");
                  $("#tip2_05").show();
                  $("#tip2_05").addClass("animated fadeInUp");
                 2
-               $("#tip_02").removeClass("animated bounceInRight");
-               $("#tip_02").removeClass("animated bounceInRight");
+               $("#tip_02").removeClass("animated fadeInRight");
+               $("#tip_02").removeClass("animated fadeInRight");
                 
                $("#tip_01").css({"z-index":"0"});
                
@@ -155,16 +163,16 @@ $("#bottom_img").swipe({
             $("#tip_01").css({"z-index":"1"});
             $("#bottom_img").css({"z-index":"2"});
              if(direction=="right"){
-              $("#bottom_img").addClass("animated bounceInLeft");
+              $("#bottom_img").addClass("animated fadeInLeft");
             }else{
-               $("#bottom_img").addClass("animated bounceInDown");
+               $("#bottom_img").addClass("animated fadeInDown");
             }
             $('#bottom_img').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
                
 
-             $("#bottom_img").removeClass("animated bounceInDown");
-             $("#bottom_img").removeClass("animated bounceInLeft");
+             $("#bottom_img").removeClass("animated fadeInDown");
+             $("#bottom_img").removeClass("animated fadeInLeft");
             $("#tip_01").css({"z-index":"0"});
           });
            
@@ -187,20 +195,20 @@ $("#bottom_img").swipe({
             $("#tip_02").css({"z-index":"1"});
             $("#tip_03").css({"z-index":"2"});
              if(direction=="left"){
-              $("#tip_03").addClass("animated bounceInRight");
+              $("#tip_03").addClass("animated fadeInRight");
             }else{
-               $("#tip_03").addClass("animated bounceInUp");
+               $("#tip_03").addClass("animated fadeInUp");
             }
              $('#tip_03').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
                  $("#tip3_03").show();
                  $("#tip3_03").addClass("animated fadeInDown");
                  $("#tip3_02").show();
-                 $("#tip3_02").addClass("animated bounceInRight");
+                 $("#tip3_02").addClass("animated fadeInRight");
                  $("#tip3_05").show();
                  $("#tip3_05").addClass("animated fadeInUp");
-             $("#tip_03").removeClass("animated bounceInRight");
-             $("#tip_03").removeClass("animated bounceInUp");
+             $("#tip_03").removeClass("animated fadeInRight");
+             $("#tip_03").removeClass("animated fadeInUp");
              $("#tip_02").css({"z-index":"0"});
             
           });
@@ -216,14 +224,14 @@ $("#bottom_img").swipe({
             $("#tip_02").css({"z-index":"1"});
             $("#tip_01").css({"z-index":"2"});
              if(direction=="right"){
-              $("#tip_01").addClass("animated bounceInLeft");
+              $("#tip_01").addClass("animated fadeInLeft");
             }else{
-               $("#tip_01").addClass("animated bounceInDown");
+               $("#tip_01").addClass("animated fadeInDown");
             }
             $('#tip_01').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
-             $("#tip_01").removeClass("animated bounceInDown");
-             $("#tip_01").removeClass("animated bounceInLeft");
+             $("#tip_01").removeClass("animated fadeInDown");
+             $("#tip_01").removeClass("animated fadeInLeft");
              $("#tip_02").css({"z-index":"0"});
             
           });
@@ -247,20 +255,20 @@ $("#bottom_img").swipe({
             $("#tip_03").css({"z-index":"1"});
             $("#tip_04").css({"z-index":"2"});
              if(direction=="left"){
-              $("#tip_04").addClass("animated bounceInRight");
+              $("#tip_04").addClass("animated fadeInRight");
             }else{
-               $("#tip_04").addClass("animated bounceInUp");
+               $("#tip_04").addClass("animated fadeInUp");
             }
              $('#tip_04').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
                  $("#tip4_03").show();
                  $("#tip4_03").addClass("animated fadeInDown");
                  $("#tip4_02").show();
-                 $("#tip4_02").addClass("animated bounceInRight");
+                 $("#tip4_02").addClass("animated fadeInRight");
                  $("#tip4_05").show();
                  $("#tip4_05").addClass("animated fadeInUp");
-             $("#tip_04").removeClass("animated bounceInRight");
-             $("#tip_04").removeClass("animated bounceInUp");
+             $("#tip_04").removeClass("animated fadeInRight");
+             $("#tip_04").removeClass("animated fadeInUp");
              $("#tip_03").css({"z-index":"0"});
             
           });
@@ -276,14 +284,14 @@ $("#bottom_img").swipe({
             $("#tip_03").css({"z-index":"1"});
             $("#tip_02").css({"z-index":"2"});
              if(direction=="right"){
-              $("#tip_02").addClass("animated bounceInLeft");
+              $("#tip_02").addClass("animated fadeInLeft");
             }else{
-               $("#tip_02").addClass("animated bounceInDown");
+               $("#tip_02").addClass("animated fadeInDown");
             }
             $('#tip_02').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
-             $("#tip_02").removeClass("animated bounceInDown");
-             $("#tip_02").removeClass("animated bounceInLeft");
+             $("#tip_02").removeClass("animated fadeInDown");
+             $("#tip_02").removeClass("animated fadeInLeft");
              $("#tip_03").css({"z-index":"0"});
             
           });
@@ -307,25 +315,25 @@ $("#bottom_img").swipe({
               $("#tip_04").css({"z-index":"1"});
               $("#tip_05").css({"z-index":"2"});
               if(direction=="left"){
-                $("#tip_05").addClass("animated bounceInRight");
+                $("#tip_05").addClass("animated fadeInRight");
               }else{
-                 $("#tip_05").addClass("animated bounceInUp");
+                 $("#tip_05").addClass("animated fadeInUp");
               }
                $('#tip_05').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                    isSwiping=false;
                    $("#tip5_03").show();
                    $("#tip5_03").addClass("animated fadeInDown");
                    $("#tip5_02").show();
-                   $("#tip5_02").addClass("animated bounceInRight");
+                   $("#tip5_02").addClass("animated fadeInRight");
 
                    $("#tip5_04").show();
-                   $("#tip5_04").addClass("animated bounceInRight");
+                   $("#tip5_04").addClass("animated fadeInRight");
                    $("#tip5_05").show();
 
                    $("#tip5_05").addClass("animated fadeInUp");
 
-                 $("#tip_05").removeClass("animated bounceInRight");
-                 $("#tip_05").removeClass("animated bounceInUp");
+                 $("#tip_05").removeClass("animated fadeInRight");
+                 $("#tip_05").removeClass("animated fadeInUp");
                  $("#tip_04").css({"z-index":"0"});
             
               });
@@ -341,14 +349,14 @@ $("#bottom_img").swipe({
             $("#tip_04").css({"z-index":"1"});
             $("#tip_03").css({"z-index":"2"});
              if(direction=="right"){
-              $("#tip_03").addClass("animated bounceInLeft");
+              $("#tip_03").addClass("animated fadeInLeft");
             }else{
-               $("#tip_03").addClass("animated bounceInDown");
+               $("#tip_03").addClass("animated fadeInDown");
             }
             $('#tip_03').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
-             $("#tip_03").removeClass("animated bounceInDown");
-             $("#tip_03").removeClass("animated bounceInLeft");
+             $("#tip_03").removeClass("animated fadeInDown");
+             $("#tip_03").removeClass("animated fadeInLeft");
              $("#tip_04").css({"z-index":"0"});
             
           });
@@ -372,14 +380,14 @@ $("#tip_05").swipe({
             $("#tip_05").css({"z-index":"1"});
             $("#tip_04").css({"z-index":"2"});
              if(direction=="right"){
-              $("#tip_04").addClass("animated bounceInLeft");
+              $("#tip_04").addClass("animated fadeInLeft");
             }else{
-               $("#tip_04").addClass("animated bounceInDown");
+               $("#tip_04").addClass("animated fadeInDown");
             }
             $('#tip_04').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                isSwiping=false;
-             $("#tip_04").removeClass("animated bounceInDown");
-             $("#tip_04").removeClass("animated bounceInLeft");
+             $("#tip_04").removeClass("animated fadeInDown");
+             $("#tip_04").removeClass("animated fadeInLeft");
              $("#tip_05").css({"z-index":"0"});
             
           });
