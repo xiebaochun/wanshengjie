@@ -4,9 +4,13 @@ $(function () {
 
   $('#index_img').eraser({
     progressFunction: function(p) {
-      if(p>=0.5){
-        $('#index_img').eraser('clear');
-        $('#index_img').hide();
+      if(p>=0.3){
+        //$('#index_img').eraser('clear');
+        $('#index_img').addClass("animated fadeOut");
+        $("#index_img").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){    
+          $("#index_img").removeClass("animated fadeOut");
+          $('#index_img').hide();
+        });
       }
     },
     size:80
